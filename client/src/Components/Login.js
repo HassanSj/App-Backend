@@ -23,11 +23,13 @@ function Login() {
     });
 
     const data = await response.json();
+    
     if (data) {
       console.log("Token is GENERATED", data.token);
       localStorage.setItem("token", data.token);
+      localStorage.setItem("userinfo", data.data.email);
       alert("Login successful");
-      // window.location.href = "/dashboard";
+      window.location.href = "/dashboard";
     } else {
       // window.location.href = "/error";
     }
@@ -46,7 +48,7 @@ function Login() {
                   className="navbar-brand font-weight-bolder ms-lg-0 ms-3 "
                   href="../pages/dashboard.html"
                 >
-                  BLS SOLUTIONS
+                  React App
                 </a>
                 <button
                   className="navbar-toggler shadow-none ms-2"
@@ -67,6 +69,7 @@ function Login() {
                   <ul className="navbar-nav mx-auto"></ul>
                   <ul className="navbar-nav d-lg-block d-none">
                     <li className="nav-item">
+                     { /*eslint-disable */}
                       <a
                         style={{ color: "white" }}
                         onClick={redirect}

@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const jwt = require("jsonwebtoken");
-const port = 5000;
+const port = 5001;
 app.use(cors());
 app.use(express.json());
 

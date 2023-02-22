@@ -1,0 +1,6 @@
+export const ActionTypes = {
+  SET_NAME: "SET_NAME",
+  SET_FATHER_NAME: "SET_FATHER_NAME",
+  SET_COMPANY_NAME: "SET_COMPANT_NAME",
+  CITY: "CITY",
+};
